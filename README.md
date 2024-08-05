@@ -31,4 +31,4 @@
 
 ## 🌟 Impact:
 
-##### Our project aims to provide parents with peace of mind, knowing that their children are not exposed to harmful content while watching movies. It highlights the potential of AI in ##### creating safer digital environments for the younger audience.
+##### Our project aims to provide parents with peace of mind, knowing that their children are not exposed to harmful content while watching movies. It highlights the potential of AI in creating safer digital environments for the younger audience.
