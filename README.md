@@ -1,5 +1,5 @@
 # Graduation-Project (Content filtering analysis in movies)
-##### Our project focuses on safeguarding children from inappropriate movie content using advanced AI techniques with web development. 
+##### Website focuses on safeguarding children from inappropriate movie content using advanced AI techniques. 
 
 ## 🎬 Project Overview:
 ### Objective:
