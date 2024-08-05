@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>movie filteration</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="static/css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="static/css/all.min.css" />
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="static/css/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img decoding="async" src="static/css/images/logo.jpg" alt="Logo" />
+            </a>
+            <nav>
+                <ul>
+                    <li><a class="active" href="{{url_for('page')}}">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#" class="btnLogin-popup">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="overlay"></div>
+        <div class="text">
+            <div class="content">
+                <h2>
+                    Skip or mute what you don't want to see or hear with filter movies.</b>
+                </h2>
+                <p>
+                    Filter out things you don't want to see or hear in streaming movies and TV shows, like profanity and
+                    violence.
+                </p>
+            </div>
+        </div>
+
+        <!-- Start login-register -->
+        <div class="wrapper">
+            <span class="icon-close">
+                <ion-icon name="close"></ion-icon>
+            </span>
+            <!-- login -->
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="{{url_for('check')}}" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" name="mail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" name="pass" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="btn Login">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        <p> <a href="{{url_for('send')}}" class="register-link">forget your password?</a></p>
+                    </div>
+                </form>
+            </div>
+            <!-- register -->
+            <div class="form-box register">
+                <h2>Registeration</h2>
+                <form action="{{url_for('reg')}}" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" name="reguser" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" name="regmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" name="regpass" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- End login-register -->
+
+        <ul class="bullets">
+            <li></li>
+            <li class="active"></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- End Landing -->
+
+    <!-- Start Video -->
+    <div class="video">
+        <video autoplay muted loop>
+            <source src="static/css/images/skip_action.mp4" type="video/mp4" />
+        </video>
+        <div class="text">
+            <h2>More watching. Less worrying.</h2>
+        </div>
+    </div>
+    <!-- End Video -->
+
+    <!-- Start Services -->
+    <div class="services">
+        <div class="container">
+            <div class="main-heading">
+                <h2>Watch from anywhere</h2>
+            </div>
+            <div class="services-container">
+                <div class="srv-box">
+                    <img src="static/css/images/TV-Icon.png" alt="tv devices compatible with vidangel"></b>
+                    <h3 class="TV">TV</h3>
+                </div>
+                <div class="srv-box">
+                    <img src="static/css/images/Phone-Icon.png" alt="mobile devices compatible with vidangel"></b>
+                    <h3 class="phone">Phone</h3>
+                </div>
+                <div class="srv-box">
+                    <img src="static/css/images/Computer-Icon.png" alt="browsers compatible with vidangel"></b>
+                    <h3 class="website">Website</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Services -->
+    
+    <!-- Start OPtions -->
+    <div class="services">
+        <div class="container">
+            <div class="main-heading">
+                <h2>Options to filter (...)</h2>
+            </div>
+            <div class="services-container">
+                <div class="srv-box">
+                    <img src="static/css/images/hateSpeech.png" alt="hate-speech icon"></b>
+                    <h3 class="TV">Hate speech</h3>
+                </div>
+                <div class="srv-box">
+                    <img src="static/css/images/ViolentScenes.png" alt="Violent-Scenes icon"></b>
+                    <h3 class="phone">Violent Scenes</h3>
+                </div>
+                <div class="srv-box">
+                    <img src="static/css/images/hate&violent.png" alt="HateSpeech&ViolentScenes icon"></b>
+                    <h3 class="website">HateSpeech&ViolentScenes</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End OPtions -->
+
+    <!-- Start About -->
+    <div class="about" id="about">
+        <div class="container">
+            <div class="main-heading">
+                <h2>About filterMOVIES</h2>
+                <p>
+                    We want to make media better for you.</br>
+                    We seek to address concerns about inappropriate content and provide a safer and more enjoyable movie
+                    viewing experience for audiences of all ages, especially children.
+                </p>
+            </div>
+            <img decoding="async" src="static/css/images/about.png" alt="" />
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <img decoding="async" src="static/css/images/logo.jpg" alt="Logo" />
+            <p>We hope you enjoy watching</p>
+            <p class="copyright">&copy; 2024 <span>filterMOVIES</span> All Right Reserved</p>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+
+    <script src="static/js/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+</html>
